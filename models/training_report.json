@@ -1,0 +1,14 @@
+{
+  "category": {
+    "accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0
+  },
+  "priority": {
+    "accuracy": 0.7486631016042781,
+    "precision_macro": 0.7286713402198056,
+    "recall_macro": 0.8239041356965885,
+    "f1_macro": 0.7537141661435447
+  }
+}

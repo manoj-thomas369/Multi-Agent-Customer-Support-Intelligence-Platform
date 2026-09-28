@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+models/*.joblib
+vector_index/*.index
+vector_index/*.json
+vector_index/*.jsonl
+support.db
+*.log
+.DS_Store
