@@ -77,6 +77,22 @@ scripts/
 tests/                      pytest suite (fully offline, no trained artifacts required)
 ```
 
+## Opening in VS Code
+
+The `.vscode/` folder ships run/debug configurations, so once you've created
+the venv and installed dependencies (below), open this folder in VS Code and
+use the **Run and Debug** panel (`Ctrl+Shift+D`) instead of typing commands:
+
+- **Backend: FastAPI (uvicorn)** - starts the API on port 8000
+- **Frontend: Streamlit** - starts the chat UI
+- **Full stack (backend + frontend)** - starts both together
+- **Scripts: generate_dataset.py / train_classifier.py / build_vector_index.py** - reruns the one-time setup steps
+- **Tests: pytest** - runs the test suite
+
+VS Code will prompt to install the recommended Python extension if it isn't
+already installed, and is pre-configured to use `.venv` and discover tests
+under `tests/`.
+
 ## Setup
 
 ```bash

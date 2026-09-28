@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend: FastAPI (uvicorn)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["src.api.main:app", "--reload", "--port", "8000"],
+      "jinja": true,
+      "justMyCode": true
+    },
+    {
+      "name": "Frontend: Streamlit",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "${workspaceFolder}/app.py"],
+      "justMyCode": true
+    },
+    {
+      "name": "Scripts: generate_dataset.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/generate_dataset.py",
+      "justMyCode": true
+    },
+    {
+      "name": "Scripts: train_classifier.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/train_classifier.py",
+      "justMyCode": true
+    },
+    {
+      "name": "Scripts: build_vector_index.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/build_vector_index.py",
+      "justMyCode": true
+    },
+    {
+      "name": "Tests: pytest",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-q"],
+      "justMyCode": true
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full stack (backend + frontend)",
+      "configurations": ["Backend: FastAPI (uvicorn)", "Frontend: Streamlit"]
+    }
+  ]
+}
